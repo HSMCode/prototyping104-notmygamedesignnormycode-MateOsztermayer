@@ -13,7 +13,7 @@ public class FallingCoal : MonoBehaviour
         //find the player and store in our player variable
         player = GameObject.FindGameObjectWithTag("Player");
 
-        speed = Random.Range(3f, 10f);
+        speed = Random.Range(4f, 8f);
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class FallingCoal : MonoBehaviour
         //move object to its new position
         transform.position = newPosition;
         //give object a new random speed
-        speed = Random.Range(3f, 10f);
+        speed = Random.Range(4f, 8f);
     }
 
     void OnTriggerEnter2D(Collider2D other)

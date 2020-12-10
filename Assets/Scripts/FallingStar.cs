@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingGold : MonoBehaviour
+public class FallingStar : MonoBehaviour
 {
     public float speed;         //speed is how many units per second we move
     public GameObject player;   //this will hold a link to the player
@@ -13,7 +13,7 @@ public class FallingGold : MonoBehaviour
         //find the player and store in our player variable
         player = GameObject.FindGameObjectWithTag("Player");
 
-        speed = Random.Range (4f, 6f);
+        speed = Random.Range (6f, 10f);
     }
 
     // Update is called once per frame
@@ -42,7 +42,7 @@ public class FallingGold : MonoBehaviour
         //move object to its new position
         transform.position = newPosition;
         //give object a new random speed
-        speed = Random.Range(4f, 6f);
+        speed = Random.Range(6f, 10f);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -57,7 +57,8 @@ public class FallingGold : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             //Score gold points 
-            player.SendMessage("ScorePointsGold");
+            player.SendMessage("ScorePointsStar");
         }
     }
+
 }

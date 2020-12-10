@@ -55,6 +55,15 @@ public class PlayerController : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
+    // ScorePoints will be called from the FallingGoldScript when a collision occures between the player and the gold object
+    void ScorePointsStar()
+    {
+        //add points to the score
+        score += 3;
+        //update the score text on the screen
+        scoreText.text = "Score: " + score.ToString();
+    }
+
     // ScorePoints will be called from the FallingCoalScript when a collision occures between the player and the coal object
     void ScorePointsCoal()
     {
